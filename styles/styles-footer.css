@@ -1,0 +1,21 @@
+#footer-bar {
+  padding: 0 0.5rem;
+  background-color: #d8d7d7;
+}
+
+#footer-bar p {
+  background-color: #f5f1f1;
+  padding: 0.5rem 0;
+  margin: 0;
+  color: #6d6d6d;
+  text-align: center;
+  animation: moveUp 1s ease-in;
+}
+
+/* For desktop: ************************************/
+@media only screen and (min-width: 48rem) {
+}
+
+/* For tablets: ************************************/
+@media only screen and (min-width: 30rem) and (max-width: 48rem) {
+}
