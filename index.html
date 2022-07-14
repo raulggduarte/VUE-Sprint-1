@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="author" content="Raúl G. Duarte" />
-    <title>Vue S1. HTML i CSS - Nivell 2</title>
+    <title>Vue S1. HTML i CSS - Nivell 3</title>
     <link rel="icon" type="image/x-icon" href="images/icons/favicon.ico">
     <link rel="stylesheet" href="styles/styles-general.css" />
     <link rel="stylesheet" href="styles/styles-header.css" />
@@ -24,7 +24,10 @@
       href="https://fonts.googleapis.com/css2?family=Trispace:wght@100;200;300;400;500;600;700;800&display=swap"
       rel="stylesheet"
     />
-    <script src="https://kit.fontawesome.com/512e39b846.js" crossorigin="anonymous"></script>
+    <script
+      src="https://kit.fontawesome.com/512e39b846.js"
+      crossorigin="anonymous"
+    ></script>
     <script>
       function openMenu() {
         var x = document.getElementById("navbar");
@@ -33,12 +36,19 @@
         } else {
           x.className = "topnav";
         }
+        var y = document.getElementById("top-header");
+        if (y.className === "top-header") {
+          y.className += " responsive";
+        } else {
+          y.className = "top-header";
+        }
       }
     </script>
   </head>
+
   <body>
     <header>
-      <div id="top-header">
+      <div class="top-header" id="top-header">
         <div id="header-icon">
           <img
             src="images/images-jpg-png/logo.png"
@@ -47,25 +57,55 @@
         </div>
         <div class="topnav" id="navbar">
           <ul>
-            <li><a href="#"><span class="nav-icon fa-solid fa-house-chimney"></span>Inicio</a></li>
-            <li><a href="#"><span class="nav-icon fa-solid fa-map-location-dot"></span>Rutas</a></li>
-            <li><a href="#"><span class="nav-icon fa-solid fa-square-h"></span>Hoteles</a></li>
-            <li><a href="#"><span class="nav-icon fa-solid fa-plane"></span>Vuelos</a></li>
-            <li><a href="#"><span class="nav-icon fa-solid fa-envelope-open-text"></span>Contacto</a></li>
             <li>
-              <span class="nav-icon fa-solid fa-bars fa-2xl" id="menu-icon" onclick="openMenu()"></span>
+              <a href="#"
+                ><span class="nav-icon fa-solid fa-house-chimney"></span
+                >Inicio</a
+              >
+            </li>
+            <li>
+              <a href="#"
+                ><span class="nav-icon fa-solid fa-map-location-dot"></span
+                >Rutas</a
+              >
+            </li>
+            <li>
+              <a href="#"
+                ><span class="nav-icon fa-solid fa-square-h"></span>Hoteles</a
+              >
+            </li>
+            <li>
+              <a href="#"
+                ><span class="nav-icon fa-solid fa-plane"></span>Vuelos</a
+              >
+            </li>
+            <li>
+              <a href="#"
+                ><span class="nav-icon fa-solid fa-envelope-open-text"></span
+                >Contacto</a
+              >
+            </li>
+            <li>
+              <a href="#">
+              <span
+                class="nav-icon fa-solid fa-bars fa-2xl"
+                id="menu-icon"
+                onclick="openMenu()"
+              ></span></a>
             </li>
           </ul>
         </div>
         <div id="header-social-icons">
-          <a href="#"><span class="nav-icon fa-brands fa-facebook-square"></span></a>
-          <a href="#"><span class="nav-icon fa-brands fa-twitter-square"></span></a>
+          <a href="#"
+            ><span class="nav-icon fa-brands fa-facebook-square"></span
+          ></a>
+          <a href="#"><span class="nav-icon fa-brands fa-twitter"></span></a>
         </div>
       </div>
 
-      <nav id="header-message">
+      <div id="header-message">
         <div>”Disfruta de la experiencia de otros viajeros”</div>
-      </nav>
+      </div>
     </header>
 
     <div id="main-section">
@@ -171,13 +211,15 @@
       </section>
 
       <aside id="aside-bar">
-        <h3>Something</h3>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipisci elit, sed eiusmod
-          tempor incidunt ut labore et dolore magna aliqua. Ut enim ad minim
-          veniam, quis nostrum exercitationem ullam corporis suscipit
-          laboriosam.
-        </p>
+        <div class="aside-article">
+          <h3>Something</h3>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisci elit, sed eiusmod
+            tempor incidunt ut labore et dolore magna aliqua. Ut enim ad minim
+            veniam, quis nostrum exercitationem ullam corporis suscipit
+            laboriosam.
+          </p>
+        </div>
       </aside>
     </div>
 
